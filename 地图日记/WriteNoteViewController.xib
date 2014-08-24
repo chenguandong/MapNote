@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WriteNoteViewController">
+            <connections>
+                <outlet property="adressLab" destination="Cbh-jb-P5B" id="nvb-Fn-Xvv"/>
+                <outlet property="adressSwitch" destination="eaT-7I-sdz" id="yuu-oc-ITg"/>
+                <outlet property="noteContent" destination="68b-Kz-F5t" id="UYe-gg-Zvu"/>
+                <outlet property="noteTitle" destination="12w-IQ-6vO" id="lzM-ie-FmU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weaterLab" destination="wpS-vI-xKn" id="zGf-Em-H6V"/>
+                <outlet property="weatherSwitch" destination="DgQ-1t-3bB" id="veg-BP-fOF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日记标题" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12w-IQ-6vO">
+                    <rect key="frame" x="6" y="10" width="309" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="4ih-LM-X41"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="editingDidEndOnExit" id="kCQ-C6-fdh"/>
+                    </connections>
+                </textField>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-1t-3bB">
+                    <rect key="frame" x="260" y="256" width="51" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="天气" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpS-vI-xKn">
+                    <rect key="frame" x="8" y="256" width="34" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="244" id="cae-dF-Y7A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eaT-7I-sdz">
+                    <rect key="frame" x="260" y="306" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-jb-P5B">
+                    <rect key="frame" x="8" y="306" width="34" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" indicatorStyle="white" text="日记内容" translatesAutoresizingMaskIntoConstraints="NO" id="68b-Kz-F5t">
+                    <rect key="frame" x="6" y="68" width="309" height="172"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eaT-7I-sdz" secondAttribute="trailing" constant="11" id="5at-o6-MxN"/>
+                <constraint firstItem="12w-IQ-6vO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="6" id="8TY-xA-TX2"/>
+                <constraint firstItem="Cbh-jb-P5B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="CuA-bw-ah8"/>
+                <constraint firstItem="wpS-vI-xKn" firstAttribute="top" secondItem="DgQ-1t-3bB" secondAttribute="top" id="DY5-ux-mFn"/>
+                <constraint firstAttribute="trailing" secondItem="DgQ-1t-3bB" secondAttribute="trailing" constant="11" id="K7z-i9-QCR"/>
+                <constraint firstItem="Cbh-jb-P5B" firstAttribute="top" secondItem="wpS-vI-xKn" secondAttribute="bottom" constant="19" id="Q8h-jh-3Hm"/>
+                <constraint firstItem="12w-IQ-6vO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Rlz-8v-Eaf"/>
+                <constraint firstAttribute="trailing" secondItem="68b-Kz-F5t" secondAttribute="trailing" constant="5" id="Ypr-aV-jcz"/>
+                <constraint firstItem="68b-Kz-F5t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="6" id="cpc-DP-YTy"/>
+                <constraint firstItem="wpS-vI-xKn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gby-0H-2VR"/>
+                <constraint firstItem="wpS-vI-xKn" firstAttribute="top" secondItem="68b-Kz-F5t" secondAttribute="bottom" constant="16" id="ocv-Hi-ZKP"/>
+                <constraint firstItem="Cbh-jb-P5B" firstAttribute="height" secondItem="wpS-vI-xKn" secondAttribute="height" id="rWO-jr-08M"/>
+                <constraint firstItem="wpS-vI-xKn" firstAttribute="bottom" secondItem="DgQ-1t-3bB" secondAttribute="bottom" id="wLI-lt-7IT"/>
+                <constraint firstAttribute="trailing" secondItem="12w-IQ-6vO" secondAttribute="trailing" constant="5" id="xLD-fS-hjF"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
